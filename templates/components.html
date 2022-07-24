@@ -3,7 +3,7 @@
       <div class='card'>
         <div>
           <img
-            src="{{ video['thumbnails'][0]['url'] }}"
+            src="{{ video['thumbnails'] | highest_quality_image}}"
             alt="thumbnail"
           />
         </div>
@@ -17,7 +17,9 @@
         <div>
           <p>{{ video['title'] }}</p>
           <span>Clever Programmer</span></br>
-          <span>{{ "{:,.0f}".format(video['stats']['views']) }} views • {{ video['publishedTimeText'] }}</span>
+
+          
+          <span>{{ video['stats']['views'] | numberize }} views • {{ video['publishedTimeText'] }}</span>
         </div>
       </div>
     </div>

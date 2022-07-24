@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, render_template
+from numerize.numerize import numerize
 import requests
 import pprint
 
@@ -25,20 +26,18 @@ def index():
   # print(type(data))
   # pp.pprint(contents)
   videos = [video['video'] for video in contents if video['video']['publishedTimeText']]
-
   
-
   print(videos[0])
   
   return render_template('index.html', 
                         videos=videos)
 
 @app.template_filter()
-def view_format(views):
-    views = float(views)
-    if views > 1000:
-      return f'{(views/1000):1f}'
-    
-    return "${:,.2f}".format(value)
+def numberize(views):
+  return numerize(views, 1)
 
+@app.template_filter()
+def highest_quality_image(images):
+  return images[3]['url'] if len(images) >= 4 else images[0]['url']
+  
 app.run(host='0.0.0.0', port=81)

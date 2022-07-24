@@ -202,6 +202,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "numerize"
+version = "0.12"
+description = "Convert large numbers into readable numbers for humans."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "parso"
 version = "0.8.3"
 description = "A Python Parser"
@@ -367,7 +375,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "f6b91e60ad728301f2706fff3481bfbd1fc6b331e2aab0b98705cbb0f0eacdc9"
+content-hash = "d3d11c550209db9613e0cd53a9844bb579182892e3557525b8423803108c1dfb"
 
 [metadata.files]
 aiohttp = []
@@ -388,6 +396,7 @@ jedi = []
 jinja2 = []
 markupsafe = []
 multidict = []
+numerize = []
 parso = []
 pluggy = []
 python-lsp-jsonrpc = []
