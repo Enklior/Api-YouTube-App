@@ -1,0 +1,59 @@
+body {
+  background: #12121a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: #ddd;
+  font-family: 'Avenir Next';
+}
+
+#home {
+  display: flex;
+}
+
+body > div {
+  background: #191919;
+  height: 20rem;
+  width: 20rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+body > div > div:nth-child(1) {
+  height: 70%;
+}
+
+body > div > div:nth-child(2) {
+  height: 30%;
+
+  display: flex;
+  gap: 1rem;
+}
+
+body > div > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+body > div > div > div > img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 99rem;
+  object-fit: cover;
+}
+
+span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  color: #a9a9a9;
+}

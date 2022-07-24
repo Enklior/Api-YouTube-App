@@ -1,0 +1,23 @@
+{% macro card(video) -%}
+
+      <div>
+        <img
+          src="{{ video['thumbnails'][0]['url'] }}"
+          alt="thumbnail"
+        />
+      </div>
+      <div>
+        <div>
+          <img
+            src="https://avatars.githubusercontent.com/u/60327839?s=280&v=4"
+            alt="channel"
+          />
+        </div>
+        <div>
+          <span>{{ video['title'] }}</span>
+          <p>Clever Programmer</p>
+          <p>{{ video['stats']['views'] }} • {{ video['publishedTimeText'] }}</p>
+        </div>
+      </div>
+     
+{%- endmacro %}
