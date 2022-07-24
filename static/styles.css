@@ -1,6 +1,7 @@
 body {
   background: #12121a;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -8,19 +9,32 @@ body {
   color: #ddd;
   font-family: 'Avenir Next';
 }
-
 #home {
-  display: flex;
+   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+/*   grid-gap: 0.8rem; */
+/*   margin: 5rem auto; */
+  padding: 10px;
+  width: min(90%, 75rem);
 }
 
-body > div {
+/* haha thank you dude i'm telling you! */
+/* hOLLYYY shit!!!!! */
+/*
+yeeeAaa. actually genuinely. replit is fucking king
+yoo replit is king. im at the gym on my iphone coding*/
+/* WHATS UP BOIIIIIIIIII */
+/* WASSSSSUSPPPPPP 👅👅👅👅👅 */
+/* LOLLL  */
+.card  {
   background: #191919;
   height: 20rem;
-  width: 20rem;
+  width: 20rem !important;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+ 
+/*   flex-direction: column; */
+/*   gap: 0.4rem;*/
+  
 }
 
 body > div > div:nth-child(1) {
@@ -34,13 +48,13 @@ body > div > div:nth-child(2) {
   gap: 1rem;
 }
 
-body > div > div > img {
+.card img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-body > div > div > div > img {
+#logo {
   height: 4rem;
   width: 4rem;
   border-radius: 99rem;

@@ -1,6 +1,6 @@
 {% macro card(video) -%}
 
-      <div>
+      <div class='card'>
         <img
           src="{{ video['thumbnails'][0]['url'] }}"
           alt="thumbnail"
@@ -8,7 +8,7 @@
       </div>
       <div>
         <div>
-          <img
+          <img id='logo'
             src="https://avatars.githubusercontent.com/u/60327839?s=280&v=4"
             alt="channel"
           />
