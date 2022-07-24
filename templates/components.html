@@ -1,11 +1,12 @@
 {% macro card(video) -%}
 
       <div class='card'>
-        <img
-          src="{{ video['thumbnails'][0]['url'] }}"
-          alt="thumbnail"
-        />
-      </div>
+        <div>
+          <img
+            src="{{ video['thumbnails'][0]['url'] }}"
+            alt="thumbnail"
+          />
+        </div>
       <div>
         <div>
           <img id='logo'
@@ -14,10 +15,11 @@
           />
         </div>
         <div>
-          <span>{{ video['title'] }}</span>
-          <p>Clever Programmer</p>
-          <p>{{ video['stats']['views'] }} • {{ video['publishedTimeText'] }}</p>
+          <p>{{ video['title'] }}</p>
+          <span>Clever Programmer</span></br>
+          <span>{{ "{:,.0f}".format(video['stats']['views']) }} views • {{ video['publishedTimeText'] }}</span>
         </div>
       </div>
+    </div>
      
 {%- endmacro %}

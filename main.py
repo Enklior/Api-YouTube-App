@@ -33,4 +33,12 @@ def index():
   return render_template('index.html', 
                         videos=videos)
 
+@app.template_filter()
+def view_format(views):
+    views = float(views)
+    if views > 1000:
+      return f'{(views/1000):1f}'
+    
+    return "${:,.2f}".format(value)
+
 app.run(host='0.0.0.0', port=81)
