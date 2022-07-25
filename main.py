@@ -3,6 +3,8 @@ from numerize.numerize import numerize
 import requests
 import pprint
 
+# https://www.youtube.com/watch?v=LP6mRPBg_4I
+
 pp = pprint.PrettyPrinter(indent=2)
 
 app = Flask(__name__)
@@ -22,9 +24,6 @@ def index():
   data = response.json()
   contents = data['contents']
   
-  # print(type(response.text))
-  # print(type(data))
-  # pp.pprint(contents)
   videos = [video['video'] for video in contents if video['video']['publishedTimeText']]
   
   print(videos[0])

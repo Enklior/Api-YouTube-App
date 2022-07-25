@@ -10,6 +10,26 @@ body {
   font-family: 'Avenir Next';
 }
 
+a {
+ cursor:pointer;  
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit
+}
+
+a:hover {
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+
 #home {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -20,10 +40,10 @@ body {
 @media only screen and (max-width: 1000px) {
   #home {
     display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
-  padding: 10px;
-  width: min(90%, 75rem);
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding: 10px;
+    width: min(90%, 75rem);
   }
 }
 
@@ -37,34 +57,31 @@ body {
   margin-bottom: 1rem;
 }
 
-.card> div:nth-child(1){
+.thumbnailContainer {
   height: 70%;
   margin-bottom: 1rem;
-/*   border: 1px solid green; */
 }
 
-.card> div:nth-child(2) {
+.infoContainer {
   height: 30%;
   display: flex;
   gap: 1rem;
-/*   border: 1px solid red; */
 }
 
-.card img {
+.thumbnail {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 
-#logo {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 99rem;
+.channelLogo {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 99rem;a
   object-fit: cover;
 }
 
-p {
-/*   font-size: .8rem; */
+.info > p {
   font-weight: 600;
    width: 15rem;
   white-space: nowrap;
@@ -73,7 +90,7 @@ p {
   margin: 0;
 }
 
-span {
+.info > span {
   font-size: .8rem;
   padding: 0;
   margin: 0;
