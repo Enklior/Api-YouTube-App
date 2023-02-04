@@ -1,33 +1,27 @@
 {% macro card(video) -%}
-      <div class='card'>
-
-         
-        <div class='thumbnailContainer'>
-          <a href="https://www.youtube.com/watch?v={{video['videoId']}}">
-          <img
-            src="{{ video['thumbnails'] | highest_quality_image}}"
-            alt="thumbnail"
-            class='thumbnail'/>
-            </a>
-        </div>
-            
-      <div class='infoContainer'>
-        <div class='channelLogoContainer'>
-          <img 
-            src="https://avatars.githubusercontent.com/u/60327839?s=280&v=4"
-            alt="channel"
-            class='channelLogo'
-          />
-        </div>
-        <a href="https://www.youtube.com/watch?v={{video['videoId']}}">
-        <div class='info'>
-          <p>{{ video['title'] }}</p>
-          <span>Clever Programmer</span></br>
-          <span>{{ video['stats']['views'] | numberize }} views • {{ video['publishedTimeText'] }}</span>
-        </div>
-        </a>
-      </div>
-    </div>
+<div class='card'>
   
-     
+  <div class='thumbnailContainer'>
+    <img 
+      src="{{ video['thumbnails'] | highest_quality_image }}"
+      class='thumbnail'
+      />
+  </div>
+
+  <div class='infoContainer'>
+    <div class='channelLogoContainer'>
+      <img
+        src="https://avatars.githubusercontent.com/u/60327839?s=280&v4"
+        alt="channel"
+        class='channelLogo'
+      />
+    </div>
+
+    <div class='info'>
+      <p>{{ video['title'] }}</p>
+      <span>Clever Programmer</span></br>
+      <span>{{ video['stats']['views'] | numberize }} views · {{ video['publishedTimeText'] }}</span>
+    </div>
+  </div>
+</div>
 {%- endmacro %}
